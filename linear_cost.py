@@ -11,6 +11,6 @@ def linear_cost(theta, X, y):
 def linear_cost_derivate(theta, X, y):
     m, n = X.shape()
     h = np.matmul(X, theta)
-    d = X.transpose() * (y - h)
+    d = X * (y - h)
     s = d.diagol(d)
     return s.sum() / m
